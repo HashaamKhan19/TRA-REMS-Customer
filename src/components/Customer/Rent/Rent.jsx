@@ -1,12 +1,12 @@
 import React from 'react'
 import RentHero from "../Rent/RentHero"
-import RentFilter from "../Filter/RentFilter"
+import BuyFilter from "../Filter/BuyFilter"
 
 const Rent = () => {
     return (
         <div>
             <RentHero />
-            <RentFilter />
+            <BuyFilter />
         </div>
     )
 }

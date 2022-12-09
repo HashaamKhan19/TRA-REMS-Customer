@@ -1,4 +1,15 @@
 import React from 'react'
+import easypaisaIcon from "../../../assets/icons/easypaisa-icon.png"
+import hblIcon from "../../../assets/icons/hbl-icon.png"
+import mobicashIcon from "../../../assets/icons/mobicash-icon.png"
+import moneyIcon from "../../../assets/icons/money-icon.png"
+import protectIcon from "../../../assets/icons/protect-icon.png"
+import chevronIcon from "../../../assets/icons/chevron-filled.png"
+import closeIcon from "../../../assets/icons/close-hamburger-menu.png"
+import garageIcon from "../../../assets/icons/garage-icon.png"
+import bedroomIcon from "../../../assets/icons/bedroom-dark-icon.png"
+import bathTubIcon from "../../../assets/icons/bath-with-person-icon.png"
+
 
 const Booking = () => {
     return (
@@ -247,7 +258,7 @@ const Booking = () => {
                                             <div
                                                 class="grid h-[46px] w-[65px] shrink-0 place-items-center rounded-[7px] border-2 border-inputBorder 3xl:h-[52px] 3xl:w-[74px]"
                                             >
-                                                <img src="/src/assets/icons/easypaisa-icon.png" alt="" />
+                                                <img src={easypaisaIcon} alt="" />
                                             </div>
                                         </div>
                                         <div
@@ -278,7 +289,7 @@ const Booking = () => {
                                             <div
                                                 class="grid h-[46px] w-[65px] shrink-0 place-items-center rounded-[7px] border-2 border-inputBorder 3xl:h-[52px] 3xl:w-[74px]"
                                             >
-                                                <img src="/src/assets/icons/mobicash-icon.png" alt="" />
+                                                <img src={mobicashIcon} alt="" />
                                             </div>
                                         </div>
                                         <div
@@ -309,7 +320,7 @@ const Booking = () => {
                                             <div
                                                 class="grid h-[46px] w-[65px] shrink-0 place-items-center rounded-[7px] border-2 border-inputBorder 3xl:h-[52px] 3xl:w-[74px]"
                                             >
-                                                <img src="/src/assets/icons/hbl-icon.png" alt="" />
+                                                <img src={hblIcon} alt="" />
                                             </div>
                                         </div>
                                         <div
@@ -340,14 +351,14 @@ const Booking = () => {
                                             <div
                                                 class="grid h-[46px] w-[65px] shrink-0 place-items-center rounded-[7px] border-2 border-inputBorder 3xl:h-[52px] 3xl:w-[74px]"
                                             >
-                                                <img src="/src/assets/icons/money-icon.png" alt="" />
+                                                <img src={moneyIcon} alt="" />
                                             </div>
                                         </div>
                                         <div
                                             class="option flex flex-1 items-center gap-[25px] rounded-[7px] py-[10px]"
                                         >
                                             <img
-                                                src="/src/assets/icons/protect-icon.png"
+                                                src={protectIcon}
                                                 alt=""
                                                 class="h-[35px] w-[35px] sm:h-[48px] sm:w-[48px]"
                                             />
@@ -375,7 +386,7 @@ const Booking = () => {
                                     Booking Review
                                 </h1>
                                 <img
-                                    src="/src/assets/icons/chevron-filled.png"
+                                    src={chevronIcon}
                                     alt="Chevron Down Icon"
                                     class="h-[10px] w-[14px] rotate-180 sm:w-[16px] sm:first:before:h-[12px]"
                                 />
@@ -388,7 +399,7 @@ const Booking = () => {
                                 >
                                     <img
                                         src="/src/assets/images/card-house.png"
-                                        alt=""
+                                        alt="House"
                                         class="h-[100px] w-[100px] rounded-[7px] border-[7px] border-[#E8EFFA] sm:h-[124px] sm:w-[124px]"
                                     />
                                     <div class="details flex flex-col justify-between">
@@ -407,7 +418,7 @@ const Booking = () => {
                                             class="featues align-center flex flex-wrap justify-between gap-[15px]"
                                         >
                                             <div class="feature flex items-center gap-[10px]">
-                                                <img src="/src/assets/icons/bedroom-icon.png" alt="" />
+                                                <img src={bedroomIcon} alt="" />
                                                 <p
                                                     class="text-[14px] font-bold text-detailsColor sm:text-[16px]"
                                                 >
@@ -415,7 +426,7 @@ const Booking = () => {
                                                 </p>
                                             </div>
                                             <div class="feature flex items-center gap-[10px]">
-                                                <img src="/src/assets/icons/bedroom-icon.png" alt="" />
+                                                <img src={bedroomIcon} alt="" />
                                                 <p
                                                     class="text-[14px] font-bold text-detailsColor sm:text-[16px]"
                                                 >
@@ -423,7 +434,7 @@ const Booking = () => {
                                                 </p>
                                             </div>
                                             <div class="feature flex items-center gap-[10px]">
-                                                <img src="/src/assets/icons/bedroom-icon.png" alt="" />
+                                                <img src={bedroomIcon} alt="" />
                                                 <p
                                                     class="text-[14px] font-bold text-detailsColor sm:text-[16px]"
                                                 >
@@ -431,7 +442,7 @@ const Booking = () => {
                                                 </p>
                                             </div>
                                             <div class="feature flex items-center gap-[10px]">
-                                                <img src="/src/assets/icons/bath-icon.png" alt="" />
+                                                <img src={bathTubIcon} alt="" />
                                                 <p
                                                     class="text-[14px] font-bold text-detailsColor sm:text-[16px]"
                                                 >
@@ -439,7 +450,7 @@ const Booking = () => {
                                                 </p>
                                             </div>
                                             <div class="feature flex items-center gap-[10px]">
-                                                <img src="/src/assets/icons/garage-icon.png" alt="" />
+                                                <img src={garageIcon} alt="" />
                                                 <p
                                                     class="text-[14px] font-bold text-detailsColor sm:text-[16px]"
                                                 >
@@ -454,7 +465,7 @@ const Booking = () => {
                                         </p>
                                     </div>
                                     <img
-                                        src="/src/assets/icons/close-hamburger-menu.png"
+                                        src={closeIcon}
                                         alt=""
                                         class="absolute top-0 right-0 mt-[3px] h-[18px] w-[18px] bg-white sm:mt-[5px] sm:h-[20px] sm:w-[20px]"
                                     />

@@ -1,4 +1,13 @@
 import React from 'react'
+import googleDownloadImage from "../../../assets/icons/Google-Download-Button.png"
+import appleDownloadImage from "../../../assets/icons/Apple-Download-Button.png"
+import facebookIcon from "../../../assets/icons/facebook-dark.png"
+import twitterIcon from "../../../assets/icons/twitter-dark.png"
+import instagramIcon from "../../../assets/icons/instagram-dark.png"
+import youtubeIcon from "../../../assets/icons/youtube-dark.png"
+import pinterestIcon from "../../../assets/icons/pinterest-dark.png"
+import backgroundImage from "../../../assets/images/Background.png"
+
 
 export const CustomFooter = () => {
   return (
@@ -41,7 +50,7 @@ export const CustomFooter = () => {
           class="h-[40px] w-[128px] overflow-hidden rounded-[8px] duration-150 hover:scale-105 sm:h-[47px] sm:w-[150px]"
         >
           <img
-            src="/src/assets/icons/Apple-Download-Button.png"
+            src={appleDownloadImage}
             alt="Apple App Store Download Button"
             class="w-full"
           />
@@ -50,7 +59,7 @@ export const CustomFooter = () => {
           class="h-[40px] w-[128px] overflow-hidden rounded-[8px] duration-150 hover:scale-105 sm:h-[47px] sm:w-[150px]"
         >
           <img
-            src="/src/assets/icons/Google-Download-Button.png"
+            src={googleDownloadImage}
             alt="Google Play Store Download Button"
             class="w-full"
           />
@@ -63,37 +72,37 @@ export const CustomFooter = () => {
         <a href="#"
           ><img
             class="w-[24px] duration-150 hover:scale-105"
-            src="/src/assets/icons/facebook-dark.png"
+            src={facebookIcon}
             alt=""
         /></a>
         <a href="#"
           ><img
             class="w-[24px] duration-150 hover:scale-105"
-            src="/src/assets/icons/twitter-dark.png"
+            src={twitterIcon}
             alt=""
         /></a>
         <a href="#"
           ><img
             class="w-[24px] duration-150 hover:scale-105"
-            src="/src/assets/icons/instagram-dark.png"
+            src={instagramIcon}
             alt=""
         /></a>
         <a href="#"
           ><img
             class="w-[24px] duration-150 hover:scale-105"
-            src="/src/assets/icons/youtube-dark.png"
+            src={youtubeIcon}
             alt=""
         /></a>
         <a href="#"
           ><img
             class="w-[24px] duration-150 hover:scale-105"
-            src="/src/assets/icons/pinterest-dark.png"
+            src={pinterestIcon}
             alt=""
         /></a>
       </div>
       {/* <!-- Background image at the bottom --> */}
       <img
-        src="/src/assets/images/Background.png"
+        src={backgroundImage}
         alt="City Silhouette"
         class="absolute bottom-0 -z-10 object-cover"
       />

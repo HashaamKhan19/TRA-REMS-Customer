@@ -1,4 +1,6 @@
 import React from 'react'
+import googleIcon from "../../../assets/icons/google-icon.png"
+import facebookIcon from "../../../assets/icons/facebook-icon.png"
 
 export const SignUp = () => {
     return (
@@ -25,7 +27,7 @@ export const SignUp = () => {
                         class="mr-[18px] flex h-[50px] w-[142px] items-center justify-center rounded-[7px] border-[1.33px] border-borderLightGray text-[14px] font-medium text-black duration-300 hover:border-borderGreen sm:h-[59px] sm:w-[168px] sm:text-[16px]"
                     >
                         <img
-                            src="/src/assets/icons/google-icon.png"
+                            src={googleIcon}
                             alt="Google Icon"
                             class="mr-[11px] h-[30px] w-[30px] sm:h-[35px] sm:w-[35px]"
                         />
@@ -35,7 +37,7 @@ export const SignUp = () => {
                         class="flex h-[50px] w-[142px] items-center justify-center rounded-[7px] border-[1.33px] border-borderLightGray text-[14px] font-medium text-black duration-300 hover:border-borderGreen sm:h-[59px] sm:w-[168px] sm:text-[16px]"
                     >
                         <img
-                            src="/src/assets/icons/facebook-icon.png"
+                            src={facebookIcon}
                             alt="Facebook Icon"
                             class="mr-[11px] h-[30px] w-[30px] sm:h-[35px] sm:w-[35px]"
                         />

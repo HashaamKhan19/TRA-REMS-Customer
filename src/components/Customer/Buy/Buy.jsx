@@ -1,5 +1,5 @@
 import React from 'react'
-import { BuyFilter } from '../Filter/BuyFilter'
+import BuyFilter from '../Filter/BuyFilter'
 import { BuyHero } from './BuyHero'
 import { BuyCard } from './BuyCard'
 

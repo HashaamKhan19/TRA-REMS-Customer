@@ -1,12 +1,12 @@
 import React from 'react'
 import ExchangeHero from "../Exchange/ExchangeHero"
-import { ExchangeFilter } from '../Filter/ExchangeFilter'
+import BuyFilter from '../Filter/BuyFilter'
 
 const Exchange = () => {
     return (
         <div>
             <ExchangeHero />
-            <ExchangeFilter />
+            <BuyFilter />
         </div>
     )
 }

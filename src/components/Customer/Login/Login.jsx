@@ -1,4 +1,6 @@
 import React from 'react'
+import googleIcon from "../../../assets/icons/google-icon.png"
+import facebookIcon from "../../../assets/icons/facebook-icon.png"
 
 export const Login = () => {
     return (
@@ -20,20 +22,20 @@ export const Login = () => {
                 <p class="text-[20px] sm:text-[24px]">Login into your account</p>
                 <div class="social-logins mt-[52px] mb-[49px] flex">
                     <button
-                        class="mr-[18px] flex h-[50px] w-[142px] items-center justify-center rounded-[7px] border-[1.33px] border-borderLightGray text-[14px] font-medium text-black duration-300 hover:border-borderGreen sm:h-[59px] sm:w-[168px] sm:text-[16px]"
+                        class="mr-[18px] flex h-[50px] w-[142px] items-center justify-center rounded-[7px] border-[1.33px] border-borderLightGray text-[14px] font-medium text-black duration-300 hover:border-accentRed sm:h-[59px] sm:w-[168px] sm:text-[16px]"
                     >
                         <img
-                            src="/src/assets/icons/google-icon.png"
+                            src={googleIcon}
                             alt="Google Icon"
                             class="mr-[11px] h-[30px] w-[30px] sm:h-[35px] sm:w-[35px]"
                         />
                         Google
                     </button>
                     <button
-                        class="flex h-[50px] w-[142px] items-center justify-center rounded-[7px] border-[1.33px] border-borderLightGray text-[14px] font-medium text-black duration-300 hover:border-borderGreen sm:h-[59px] sm:w-[168px] sm:text-[16px]"
+                        class="flex h-[50px] w-[142px] items-center justify-center rounded-[7px] border-[1.33px] border-borderLightGray text-[14px] font-medium text-black duration-300 hover:border-accentRed sm:h-[59px] sm:w-[168px] sm:text-[16px]"
                     >
                         <img
-                            src="/src/assets/icons/facebook-icon.png"
+                            src={facebookIcon}
                             alt="Facebook Icon"
                             class="mr-[11px] h-[30px] w-[30px] sm:h-[35px] sm:w-[35px]"
                         />
@@ -47,7 +49,6 @@ export const Login = () => {
                 </p>
 
                 <form
-                    action="none"
                     class="w-[calc(100vw-10%)] xs:w-[calc(100vw-20%)] sm:w-min"
                 >
                     <input
@@ -101,7 +102,6 @@ export const Login = () => {
                     </div>
 
                     <button
-                        type="submit"
                         class="h-[65px] w-full rounded-[14px] bg-accentRed text-[18px] font-bold text-white sm:h-[74px] sm:text-[24px]"
                     >
                         Login

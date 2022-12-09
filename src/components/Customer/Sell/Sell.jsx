@@ -1,12 +1,12 @@
 import React from 'react'
 import { SellHero } from './SellHero'
-import SellFilter from "../Filter/SellFilter"
+import BuyFilter from "../Filter/BuyFilter"
 
 export const Sell = () => {
     return (
         <div>
             <SellHero />
-            <SellFilter />
+            <BuyFilter />
         </div>
     )
 }

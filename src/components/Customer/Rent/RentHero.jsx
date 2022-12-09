@@ -1,4 +1,8 @@
 import React from 'react'
+import locationIcon from "../../../assets/icons/location-icon.svg"
+import homeIcon from "../../../assets/icons/home-icon.svg"
+import dollarIcon from "../../../assets/icons/dollar-icon.svg"
+
 
 const RentHero = () => {
     return (
@@ -59,7 +63,7 @@ const RentHero = () => {
                                     />
                                     <div class="absolute right-0 top-0 flex h-full items-center pr-[1rem]">
                                         <img
-                                            src="/src/assets/icons/location-icon.svg"
+                                            src={locationIcon}
                                             class="h-auto w-[18px] sm:w-[24px]"
                                             alt=""
                                         />
@@ -73,7 +77,7 @@ const RentHero = () => {
                                     />
                                     <div class="absolute right-0 top-0 flex h-full items-center pr-[1rem]">
                                         <img
-                                            src="/src/assets/icons/home-icon.svg"
+                                            src={homeIcon}
                                             class="h-auto w-[18px] sm:w-[24px]"
                                             alt=""
                                         />
@@ -87,7 +91,7 @@ const RentHero = () => {
                                     />
                                     <div class="absolute right-0 top-0 flex h-full items-center pr-[1rem]">
                                         <img
-                                            src="/src/assets/icons/dollar-icon.svg"
+                                            src={dollarIcon}
                                             class="h-auto w-[18px] sm:w-[24px]"
                                             alt=""
                                         />

@@ -1,5 +1,10 @@
 import React from "react";
 import { Carousel } from "@mantine/carousel";
+import zameenImage from "../../../assets/images/zameen.com-logo.png"
+import graanaImage from "../../../assets/images/graana-logo.png"
+import agency21Image from "../../../assets/images/agency-21-logo.png"
+import shahbazImage from "../../../assets/images/shahbaz-logo.png"
+import bahriaTownImage from "../../../assets/images/bahria-town-logo.png"
 
 const FeaturedAgenciesCarousel = () => {
   return (
@@ -15,7 +20,7 @@ const FeaturedAgenciesCarousel = () => {
       <Carousel.Slide>
         <div class="agency">
           <img
-            src="/src/assets/images/zameen.com-logo.png"
+            src={zameenImage}
             class="h-full w-auto object-contain"
             alt=""
           />
@@ -24,7 +29,7 @@ const FeaturedAgenciesCarousel = () => {
       <Carousel.Slide>
         <div class="agency">
           <img
-            src="/src/assets/images/graana-logo.png"
+            src={graanaImage}
             class="h-full w-auto object-contain"
             alt=""
           />
@@ -33,7 +38,7 @@ const FeaturedAgenciesCarousel = () => {
       <Carousel.Slide>
         <div class="agency hidden xs:block">
           <img
-            src="/src/assets/images/agency-21-logo.png"
+            src={agency21Image}
             class="h-full w-auto object-contain"
             alt=""
           />
@@ -42,7 +47,7 @@ const FeaturedAgenciesCarousel = () => {
       <Carousel.Slide>
         <div class="agency hidden md:block">
           <img
-            src="/src/assets/images/shahbaz-logo.png"
+            src={shahbazImage}
             class="h-full w-auto object-contain"
             alt=""
           />
@@ -51,7 +56,7 @@ const FeaturedAgenciesCarousel = () => {
       <Carousel.Slide>
         <div class="agency hidden lg:block">
           <img
-            src="/src/assets/images/bahria-town-logo.png"
+            src={bahriaTownImage}
             class="h-full w-auto object-contain"
             alt=""
           />

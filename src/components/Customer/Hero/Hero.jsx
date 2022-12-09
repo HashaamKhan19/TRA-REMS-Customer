@@ -1,5 +1,9 @@
 import React from "react";
 import Listings from "../Listings/Listings";
+import locationIcon from "../../../assets/icons/location-icon.svg"
+import homeIcon from "../../../assets/icons/home-icon.svg"
+import dollarIcon from "../../../assets/icons/dollar-icon.svg"
+
 
 export default function Hero() {
   return (
@@ -64,7 +68,7 @@ export default function Hero() {
                   />
                   <div class="absolute right-0 top-0 flex h-full items-center pr-[1rem]">
                     <img
-                      src="/src/assets/icons/location-icon.svg"
+                      src={locationIcon}
                       class="h-auto w-[18px] sm:w-[24px]"
                       alt=""
                     />
@@ -78,7 +82,7 @@ export default function Hero() {
                   />
                   <div class="absolute right-0 top-0 flex h-full items-center pr-[1rem]">
                     <img
-                      src="/src/assets/icons/home-icon.svg"
+                      src={homeIcon}
                       class="h-auto w-[18px] sm:w-[24px]"
                       alt=""
                     />
@@ -92,15 +96,15 @@ export default function Hero() {
                   />
                   <div class="absolute right-0 top-0 flex h-full items-center pr-[1rem]">
                     <img
-                      src="/src/assets/icons/dollar-icon.svg"
+                      src={dollarIcon}
                       class="h-auto w-[18px] sm:w-[24px]"
                       alt=""
                     />
                   </div>
                 </div>
-                <a class="inline-flex h-full max-w-[230px] items-center justify-center rounded-[7px] bg-accentRed p-[10px_20px] text-[16px] text-white sm:rounded-[14px] sm:text-[27px]">
+                <button class="inline-flex h-full max-w-[230px] items-center justify-center rounded-[7px] bg-accentRed p-[10px_20px] text-[16px] text-white sm:rounded-[14px] sm:text-[27px]">
                   Search Now
-                </a>
+                </button>
               </div>
             </div>
           </div>

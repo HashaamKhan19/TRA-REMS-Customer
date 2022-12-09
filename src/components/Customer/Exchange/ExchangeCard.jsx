@@ -1,4 +1,13 @@
 import React from "react";
+import listViewIcon from "../../../assets/icons/list-view.png"
+import boxViewIcon from "../../../assets/icons/box-view.png"
+import houseImage from "../../../assets/images/carousel-house.png"
+import locationFilledIcon from "../../../assets/icons/location-filled.png"
+import bluePrintIcon from "../../../assets/icons/blueprint.png"
+import bedroomIcon from "../../../assets/icons/bedroom-dark-icon.png"
+import bathTubIcon from "../../../assets/icons/bath-with-person-icon.png"
+import { Link } from "react-router-dom";
+
 
 const ExchangeCard = () => {
     return (
@@ -42,7 +51,7 @@ const ExchangeCard = () => {
                                 class="grid h-full w-full place-items-center rounded-[6px] bg-[#3E4345]/10 drop-shadow-[0_5px_5px_rgba(0,0,0,0.25)] peer-checked:bg-white peer-checked:drop-shadow-[0_5px_5px_rgba(108,16,19,0.25)]"
                             >
                                 <img
-                                    src="/src/assets/icons/list-view.png"
+                                    src={listViewIcon}
                                     class="w-[18px] xl:w-[21px] 2xl:w-[25px]"
                                     alt=""
                                 />
@@ -55,7 +64,7 @@ const ExchangeCard = () => {
                                 class="grid h-full w-full place-items-center rounded-[6px] bg-[#3E4345]/10 drop-shadow-[0_5px_5px_rgba(0,0,0,0.25)] peer-checked:bg-white peer-checked:drop-shadow-[0_5px_5px_rgba(108,16,19,0.25)]"
                             >
                                 <img
-                                    src="/src/assets/icons/box-view.png"
+                                    src={boxViewIcon}
                                     class="w-[18px] xl:w-[21px] 2xl:w-[25px]"
                                     alt=""
                                 />
@@ -68,7 +77,7 @@ const ExchangeCard = () => {
                 <a href="">
                     <div class="ad group flex w-full flex-col justify-between gap-[15px] rounded-[10px] bg-white p-[15px] drop-shadow-[7px_7px_30px_rgba(0,0,0,0.15)] duration-500 hover:bg-accentRed sm:w-auto sm:flex-row xl:gap-[20px] xl:rounded-[15px] xl:p-[20px] 2xl:gap-[32px] 2xl:rounded-[20px] 2xl:p-[30px]">
                         <img
-                            src="/src/assets/images/carousel-house.png"
+                            src={houseImage}
                             class="aspect-[1.35] h-full min-h-[185px] w-full min-w-[250px] flex-shrink md:min-h-[185px] md:min-w-[350px] lg:min-h-[224px] lg:min-w-[300px] xl:min-h-[300px] xl:min-w-[400px]"
                             alt=""
                         />
@@ -91,7 +100,7 @@ const ExchangeCard = () => {
                             <div class="featues flex gap-[20px] xl:gap-[30px] 2xl:gap-[40px]">
                                 <p class="flex items-center gap-[10px] whitespace-nowrap text-[16px] font-medium text-dividerBlack duration-500 group-hover:text-white xs:gap-[15px] xs:text-[18px] sm:gap-[10px] sm:text-[16px] md:text-[18px] xl:gap-[15px] xl:text-[22px] 2xl:gap-[20px] 2xl:text-[25px]">
                                     <img
-                                        src="/src/assets/icons/blueprint.png"
+                                        src={bluePrintIcon}
                                         alt=""
                                         class="h-auto w-[20px] xs:w-[25px] sm:w-[20px] md:w-[25px] xl:w-[35px] 2xl:w-[40px]"
                                     />
@@ -99,7 +108,7 @@ const ExchangeCard = () => {
                                 </p>
                                 <p class="flex items-center gap-[10px] text-[16px] font-medium text-dividerBlack duration-500 group-hover:text-white md:text-[18px] xl:gap-[15px] xl:text-[22px] 2xl:gap-[20px] 2xl:text-[25px]">
                                     <img
-                                        src="/src/assets/icons/bedroom-dark-icon.png"
+                                        src={bedroomIcon}
                                         alt=""
                                         class="h-auto w-[20px] xs:w-[25px] sm:w-[20px] md:w-[25px] xl:w-[35px] 2xl:w-[40px]"
                                     />
@@ -107,7 +116,7 @@ const ExchangeCard = () => {
                                 </p>
                                 <p class="flex items-center gap-[10px] text-[16px] font-medium text-dividerBlack duration-500 group-hover:text-white md:text-[18px] xl:gap-[15px] xl:text-[22px] 2xl:gap-[20px] 2xl:text-[25px]">
                                     <img
-                                        src="/src/assets/icons/bath-with-person-icon.png"
+                                        src={bathTubIcon}
                                         alt=""
                                         class="h-auto w-[20px] xs:w-[25px] sm:w-[20px] md:w-[25px] xl:w-[35px] 2xl:w-[40px]"
                                     />

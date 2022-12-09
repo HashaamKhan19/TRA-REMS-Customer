@@ -2,6 +2,7 @@ import React from 'react'
 import { HotFlatCarousel } from '../Carousel/HotFlatCarousel'
 import FeaturedAgenciesCarousel from '../Carousel/FeaturedAgenciesCarousel'
 import Hero from '../Hero/Hero';
+import { Link } from 'react-router-dom';
 
 const Listings = () => {
   return (
@@ -20,11 +21,10 @@ const Listings = () => {
           >
             Premiere House Listings
           </h1>
-          <a
-            href=""
+          <Link
+            to={'/'}
             class="text-[16px] font-bold text-accentRed hover:underline sm:text-[20px] md:text-[23px] lg:text-[26px] xl:text-[30px] 2xl:text-[35px]"
-            >See all</a
-          >
+            >See all</Link>
         </div>
 
         {/* Carousel Component here */}
@@ -44,11 +44,10 @@ const Listings = () => {
           >
             Hot Flat Listings
           </h1>
-          <a
-            href=""
+          <Link
+            to={'/'}
             class="text-[16px] font-bold text-accentRed hover:underline sm:text-[20px] md:text-[23px] lg:text-[26px] xl:text-[30px] 2xl:text-[35px]"
-            >See all</a
-          >
+            >See all</Link>
         </div>
         <HotFlatCarousel />
       </div>
@@ -67,11 +66,10 @@ const Listings = () => {
           >
             Latest Plot Listings
           </h1>
-          <a
-            href=""
+          <Link
+            to={'/'}
             class="text-[16px] font-bold text-accentRed hover:underline sm:text-[20px] md:text-[23px] lg:text-[26px] xl:text-[30px] 2xl:text-[35px]"
-            >See all</a
-          >
+            >See all</Link>
         </div>
         <HotFlatCarousel />
       </div>
@@ -90,11 +88,10 @@ const Listings = () => {
           >
             Featured Commercial Listings
           </h1>
-          <a
-            href=""
+          <Link
+            to={'/'}
             class="text-[16px] font-bold text-accentRed hover:underline sm:text-[20px] md:text-[23px] lg:text-[26px] xl:text-[30px] 2xl:text-[35px]"
-            >See all</a
-          >
+            >See all</Link>
         </div>
         <HotFlatCarousel />
       </div>
@@ -112,11 +109,10 @@ const Listings = () => {
           >
             Featured Agencies Listings
           </h1>
-          <a
-            href=""
+          <Link
+            to={'/'}
             class="text-[16px] font-bold text-accentRed hover:underline sm:text-[20px] md:text-[23px] lg:text-[26px] xl:text-[30px] 2xl:text-[35px]"
-            >See all</a
-          >
+            >See all</Link>
         </div>
         <FeaturedAgenciesCarousel />
       </div>

@@ -6,9 +6,9 @@ import ListItemText from "@mui/material/ListItemText";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import { BuyCard } from "../Buy/BuyCard";
+import filterIcon from "../../../assets/icons/filter-variant.png"
 
-
-export const BuyFilter = () => {
+export default function BuyFilter() {
   const [propertyOpen, setPropertyOpen] = React.useState(true);
   const [utilityOpen, setUtilityOpen] = React.useState(true);
   const [featureOpen, setFeatureOpen] = React.useState(true);
@@ -58,7 +58,7 @@ export const BuyFilter = () => {
             <h2 class="font-bold text-accentRed 2xl:text-[34px]">
               Advanced Filters
             </h2>
-            <img src="/src/assets/icons/filter-variant.png" alt="" />
+            <img src={filterIcon} alt="" />
           </div>
           <div class="mt-[60px] flex flex-col hover:bg-none">
 
@@ -772,4 +772,4 @@ export const BuyFilter = () => {
       <BuyCard />
     </div>
   );
-};
+}

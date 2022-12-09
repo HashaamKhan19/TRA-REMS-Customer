@@ -1,5 +1,21 @@
 import React from 'react'
 import { Rating, Group } from '@mantine/core';
+import locationFilledIcon from "../../../assets/icons/location-filled.png"
+import backgroundImage from "../../../assets/images/main-carousel-image.png"
+import mapImage from "../../../assets/images/location-map.png"
+import bluePrintIcon from "../../../assets/icons/blueprint.png"
+import bedroomIcon from "../../../assets/icons/bedroom-dark-icon.png"
+import garageIcon from "../../../assets/icons/garage-icon.png"
+import bathTubIcon from "../../../assets/icons/bath-with-person-icon.png"
+import callIcon from "../../../assets/icons/call-icon.png"
+import chatIcon from "../../../assets/icons/chat-icon.png"
+import bookingIcon from "../../../assets/icons/booking-icon.png"
+import heartIcon from "../../../assets/icons/heart-icon.png"
+import shareIcon from "../../../assets/icons/share-icon.png"
+import playIcon from "../../../assets/icons/play-icon.png"
+import listIcon from "../../../assets/icons/list-icon.png"
+import checkListIcon from "../../../assets/icons/check-list.png"
+import { Link } from 'react-router-dom';
 
 const ProductPage = () => {
     return (
@@ -18,7 +34,7 @@ const ProductPage = () => {
                             class="mt-[10px] flex items-center gap-[10px] text-[14px] text-headingBlue/50 sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 3xl:text-[25px]"
                         >
                             <img
-                                src="/src/assets/icons/location-icon.svg"
+                                src={locationFilledIcon}
                                 alt="Location icon"
                                 class="aspect-square xl:w-[21px] 3xl:w-[24px]"
                             />
@@ -44,7 +60,7 @@ const ProductPage = () => {
                                 <span class="hidden lg:inline">Call</span>
                                 <span class="inline lg:hidden">
                                     <img
-                                        src="/src/assets/icons/call-icon.png"
+                                        src={callIcon}
                                         alt="Call Icon"
                                         class="w-[22px] md:w-[30px]"
                                     />
@@ -57,32 +73,32 @@ const ProductPage = () => {
                                 <span class="hidden lg:inline">Chat</span>
                                 <span class="inline lg:hidden">
                                     <img
-                                        src="/src/assets/icons/chat-icon.png"
+                                        src={chatIcon}
                                         alt="Chat Icon"
                                         class="w-[22px] md:w-[30px]"
                                     />
                                 </span>
                             </a>
-                            <a
+                            <Link
                                 class="text-medium inline-flex h-[40px] w-[40px] items-center justify-center rounded-full bg-accentRed/10 text-accentRed md:h-[50px] md:w-[50px] lg:h-[45px] lg:w-[100px] lg:rounded-[10px] xl:h-[50px] xl:w-[140px] xl:rounded-[10px] xl:text-[22px] 3xl:h-[65px] 3xl:w-[180px] 3xl:rounded-[16px] 3xl:text-[32px]"
-                                href="/booking"
+                                to="/booking"
                             >
                                 <span class="hidden lg:inline">Booking</span>
                                 <span class="inline lg:hidden">
                                     <img
-                                        src="/src/assets/icons/booking-icon.png"
+                                        src={bookingIcon}
                                         alt="Booking Icon"
                                         class="w-[22px] md:w-[30px]"
                                     />
                                 </span>
-                            </a>
+                            </Link>
                         </div>
                         <div class="actions mt-[30px] flex gap-[14px]">
                             <button
                                 class="inline-flex h-[38px] w-[38px] items-center justify-center rounded-full bg-accentRed/10 lg:h-[44px] lg:w-[44px]"
                             >
                                 <img
-                                    src="/src/assets/icons/heart-icon.png"
+                                    src={heartIcon}
                                     class="w-[18px] lg:w-[22px]"
                                     alt="Heart Icon"
                                 />
@@ -91,7 +107,7 @@ const ProductPage = () => {
                                 class="inline-flex h-[38px] w-[38px] items-center justify-center rounded-full bg-accentRed/10 lg:h-[44px] lg:w-[44px]"
                             >
                                 <img
-                                    src="/src/assets/icons/share-icon.png"
+                                    src={shareIcon}
                                     class="w-[18px] lg:w-[22px]"
                                     alt="Share Icons"
                                 />
@@ -104,7 +120,7 @@ const ProductPage = () => {
                 >
                     <div class="main-image relative aspect-[2] w-full">
                         <img
-                            src="/src/assets/images/main-carousel-image.png"
+                            src={backgroundImage}
                             alt="Main Carousel Image"
                             class="h-full w-full object-cover"
                         />
@@ -112,7 +128,7 @@ const ProductPage = () => {
                             class="absolute top-0 left-0 right-0 bottom-0 grid place-items-center"
                         >
                             <img
-                                src="/src/assets/icons/play-icon.png"
+                                src={playIcon}
                                 alt="Play Icon"
                                 class="w-[50px] sm:w-[75px] md:w-[100px] lg:w-[120px] xl:w-[150px]"
                             />
@@ -123,7 +139,7 @@ const ProductPage = () => {
                     >
                         <div class="relative flex-1 overflow-hidden rounded-[7px]">
                             <img
-                                src="/src/assets/images/main-carousel-image.png"
+                                src={backgroundImage}
                                 class="h-full w-full object-cover"
                                 alt=""
                             />
@@ -131,7 +147,7 @@ const ProductPage = () => {
                                 class="absolute top-0 left-0 right-0 bottom-0 grid place-items-center"
                             >
                                 <img
-                                    src="/src/assets/icons/play-icon.png"
+                                    src={playIcon}
                                     class="w-[25px] sm:w-[30px] md:w-[35px] lg:w-[42px]"
                                     alt="Play Icon"
                                 />
@@ -139,42 +155,42 @@ const ProductPage = () => {
                         </div>
                         <div class="flex-1 overflow-hidden rounded-[7px]">
                             <img
-                                src="/src/assets/images/Carousel-Slider-Image 1.png"
+                                src={backgroundImage}
                                 class="h-full w-full object-cover"
                                 alt=""
                             />
                         </div>
                         <div class="flex-1 overflow-hidden rounded-[7px]">
                             <img
-                                src="/src/assets/images/Carousel-Slider-Image 2.png"
+                                src={backgroundImage}
                                 class="h-full w-full object-cover"
                                 alt=""
                             />
                         </div>
                         <div class="hidden flex-1 overflow-hidden rounded-[7px] md:block">
                             <img
-                                src="/src/assets/images/Carousel-Slider-Image 3.png"
+                                src={backgroundImage}
                                 class="h-full w-full object-cover"
                                 alt=""
                             />
                         </div>
                         <div class="hidden flex-1 overflow-hidden rounded-[7px] lg:block">
                             <img
-                                src="/src/assets/images/Carousel-Slider-Image 4.png"
+                                src={backgroundImage}
                                 class="h-full w-full object-cover"
                                 alt=""
                             />
                         </div>
                         <div class="hidden flex-1 overflow-hidden rounded-[7px] xl:block">
                             <img
-                                src="/src/assets/images/Carousel-Slider-Image 5.png"
+                                src={backgroundImage}
                                 class="h-full w-full object-cover"
                                 alt=""
                             />
                         </div>
                         <div class="hidden flex-1 overflow-hidden rounded-[7px] 2xl:block">
                             <img
-                                src="/src/assets/images/Carousel-Slider-Image 6.png "
+                                src={backgroundImage}
                                 class="h-full w-full object-cover"
                                 alt=""
                             />
@@ -201,7 +217,7 @@ const ProductPage = () => {
                             class="feature grid flex-1 place-content-center place-items-center"
                         >
                             <img
-                                src="/src/assets/icons/bedroom-feature-icon.png"
+                                src={bedroomIcon}
                                 alt="Bathroom Icon"
                                 class="w-[75px] sm:w-[100px] md:w-[120px] lg:w-[150px] xl:w-[180px] 2xl:w-[200px]"
                             />
@@ -215,7 +231,7 @@ const ProductPage = () => {
                             class="feature grid flex-1 place-content-center place-items-center"
                         >
                             <img
-                                src="/src/assets/icons/bath-feature-icon.png"
+                                src={bathTubIcon}
                                 alt="Bath Icon"
                                 class="w-[75px] sm:w-[100px] md:w-[120px] lg:w-[150px] xl:w-[180px] 2xl:w-[200px]"
                             />
@@ -229,7 +245,7 @@ const ProductPage = () => {
                             class="feature grid flex-1 place-content-center place-items-center"
                         >
                             <img
-                                src="/src/assets/icons/garage-feature-icon.png"
+                                src={garageIcon}
                                 alt="Garage Icon"
                                 class="w-[75px] sm:w-[100px] md:w-[120px] lg:w-[150px] xl:w-[180px] 2xl:w-[200px]"
                             />
@@ -271,35 +287,35 @@ const ProductPage = () => {
                         class="mt-[16px] text-[17px] text-headingBlue/50 sm:text-[20px] md:text-[20px] lg:text-[25px] xl:text-[30px]"
                     >
                         <li class="mb-[5px] flex items-center gap-[16px]">
-                            <img src="/src/assets/icons/list-icon.png" alt="" />
+                            <img src={listIcon} alt="" />
                             6 Bedrooms
                         </li>
                         <li class="mb-[5px] flex items-center gap-[16px]">
-                            <img src="/src/assets/icons/list-icon.png" alt="" />
+                            <img src={listIcon} alt="" />
                             7 Washrooms
                         </li>
                         <li class="mb-[5px] flex items-center gap-[16px]">
-                            <img src="/src/assets/icons/list-icon.png" alt="" />
+                            <img src={listIcon} alt="" />
                             TV lounge
                         </li>
                         <li class="mb-[5px] flex items-center gap-[16px]">
-                            <img src="/src/assets/icons/list-icon.png" alt="" />
+                            <img src={listIcon} alt="" />
                             Drawing and Dining room
                         </li>
                         <li class="mb-[5px] flex items-center gap-[16px]">
-                            <img src="/src/assets/icons/list-icon.png" alt="" />
+                            <img src={listIcon} alt="" />
                             Kitchen (premium quality and well-maintained fixtures)
                         </li>
                         <li class="mb-[5px] flex items-center gap-[16px]">
-                            <img src="/src/assets/icons/list-icon.png" alt="" />
+                            <img src={listIcon} alt="" />
                             Store Room
                         </li>
                         <li class="mb-[5px] flex items-center gap-[16px]">
-                            <img src="/src/assets/icons/list-icon.png" alt="" />
+                            <img src={listIcon} alt="" />
                             Servant Quarter
                         </li>
                         <li class="flex items-center gap-[16px]">
-                            <img src="/src/assets/icons/list-icon.png" alt="" />
+                            <img src={listIcon} alt="" />
                             Parking Space
                         </li>
                     </ul>
@@ -321,67 +337,67 @@ const ProductPage = () => {
                         <div
                             class="flex items-center gap-[10px] text-[17px] text-headingBlue/50 sm:text-[20px] md:text-[20px] lg:gap-[16px] lg:text-[25px] xl:text-[30px]"
                         >
-                            <img src="/src/assets/icons/check-list.png" alt="" />
+                            <img src={checkListIcon} alt="" />
                             Dining Room
                         </div>
                         <div
                             class="flex items-center gap-[10px] text-[17px] text-headingBlue/50 sm:text-[20px] md:text-[20px] lg:gap-[16px] lg:text-[25px] xl:text-[30px]"
                         >
-                            <img src="/src/assets/icons/check-list.png" alt="" />
+                            <img src={checkListIcon} alt="" />
                             Kitchen
                         </div>
                         <div
                             class="flex items-center gap-[10px] text-[17px] text-headingBlue/50 sm:text-[20px] md:text-[20px] lg:gap-[16px] lg:text-[25px] xl:text-[30px]"
                         >
-                            <img src="/src/assets/icons/check-list.png" alt="" />
+                            <img src={checkListIcon} alt="" />
                             Drawing Room
                         </div>
                         <div
                             class="flex items-center gap-[10px] text-[17px] text-headingBlue/50 sm:text-[20px] md:text-[20px] lg:gap-[16px] lg:text-[25px] xl:text-[30px]"
                         >
-                            <img src="/src/assets/icons/check-list.png" alt="" />
+                            <img src={checkListIcon} alt="" />
                             TV Lounge
                         </div>
                         <div
                             class="flex items-center gap-[10px] text-[17px] text-headingBlue/50 sm:text-[20px] md:text-[20px] lg:gap-[16px] lg:text-[25px] xl:text-[30px]"
                         >
-                            <img src="/src/assets/icons/check-list.png" alt="" />
+                            <img src={checkListIcon} alt="" />
                             Store Room
                         </div>
                         <div
                             class="flex items-center gap-[10px] text-[17px] text-headingBlue/50 sm:text-[20px] md:text-[20px] lg:gap-[16px] lg:text-[25px] xl:text-[30px]"
                         >
-                            <img src="/src/assets/icons/check-list.png" alt="" />
+                            <img src={checkListIcon} alt="" />
                             Servant Quarter
                         </div>
                         <div
                             class="flex items-center gap-[10px] text-[17px] text-headingBlue/50 sm:text-[20px] md:text-[20px] lg:gap-[16px] lg:text-[25px] xl:text-[30px]"
                         >
-                            <img src="/src/assets/icons/check-list.png" alt="" />
+                            <img src={checkListIcon} alt="" />
                             Laundry Room
                         </div>
                         <div
                             class="flex items-center gap-[10px] text-[17px] text-headingBlue/50 sm:text-[20px] md:text-[20px] lg:gap-[16px] lg:text-[25px] xl:text-[30px]"
                         >
-                            <img src="/src/assets/icons/check-list.png" alt="" />
+                            <img src={checkListIcon} alt="" />
                             Gas
                         </div>
                         <div
                             class="flex items-center gap-[10px] text-[17px] text-headingBlue/50 sm:text-[20px] md:text-[20px] lg:gap-[16px] lg:text-[25px] xl:text-[30px]"
                         >
-                            <img src="/src/assets/icons/check-list.png" alt="" />
+                            <img src={checkListIcon} alt="" />
                             Water
                         </div>
                         <div
                             class="flex items-center gap-[10px] text-[17px] text-headingBlue/50 sm:text-[20px] md:text-[20px] lg:gap-[16px] lg:text-[25px] xl:text-[30px]"
                         >
-                            <img src="/src/assets/icons/check-list.png" alt="" />
+                            <img src={checkListIcon} alt="" />
                             Electricity
                         </div>
                         <div
                             class="flex items-center gap-[10px] text-[17px] text-headingBlue/50 sm:text-[20px] md:text-[20px] lg:gap-[16px] lg:text-[25px] xl:text-[30px]"
                         >
-                            <img src="/src/assets/icons/check-list.png" alt="" />
+                            <img src={checkListIcon} alt="" />
                             Parking Space
                         </div>
                     </div>
@@ -395,7 +411,7 @@ const ProductPage = () => {
                         Location on Map
                     </h2>
                     <img
-                        src="/src/assets/images/location-map.png"
+                        src={mapImage}
                         alt="Location Map"
                         class="mt-[16px] w-full object-cover"
                     />
