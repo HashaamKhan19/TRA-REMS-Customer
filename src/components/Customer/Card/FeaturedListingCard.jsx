@@ -5,7 +5,7 @@ import bluePrintIcon from "../../../assets/icons/blueprint.png"
 import bedroomIcon from "../../../assets/icons/bedroom-dark-icon.png"
 import bathTubIcon from "../../../assets/icons/bath-with-person-icon.png"
 
-export const Card = () => {
+export default function FeaturedListingCard (){
   return (
     <>
     <div class="card group flex-1 hover:cursor-pointer duration-500 hover:bg-accentRed hover:rounded-lg p-1">
