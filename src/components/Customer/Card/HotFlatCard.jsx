@@ -9,7 +9,7 @@ export const HotFlatCard = ({ property }) => {
   return (
     <>
       <div class="card group flex-1 hover:cursor-pointer duration-500 bg-slate-100 rounded-lg hover:bg-accentRed hover:rounded-lg p-1">
-        <div class="image-container relative overflow-hidden rounded-[10px]">
+        <div class="image-container relative overflow-hidden rounded-[10px] h-[250px]">
           <img
             src={property?.images[0]}
             alt=""

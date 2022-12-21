@@ -1,15 +1,12 @@
-import React from "react";
-import Listings from "../Listings/Listings";
-import locationIcon from "../../../assets/icons/location-icon.svg"
-import homeIcon from "../../../assets/icons/home-icon.svg"
-import dollarIcon from "../../../assets/icons/dollar-icon.svg"
-
+import React from 'react'
+import Listings from '../Listings/Listings'
+import locationIcon from '../../../assets/icons/location-icon.svg'
+import homeIcon from '../../../assets/icons/home-icon.svg'
+import dollarIcon from '../../../assets/icons/dollar-icon.svg'
 
 export default function Hero() {
   return (
-    <main
-      class="mb-[50px] flex flex-col items-center pt-[100px] sm:mb-[60px] md:mb-[70px] lg:mb-[80px] xl:mb-[90px] 2xl:mb-[100px] 2xl:pt-[150px]"
-    >
+    <main class="mb-[50px] flex flex-col items-center pt-[100px] sm:mb-[60px] md:mb-[70px] lg:mb-[80px] xl:mb-[90px] 2xl:mb-[100px] 2xl:pt-[150px]">
       <section class="flex w-full flex-col items-center bg-[url('/src/assets/images/home-page-cover.png')] bg-right-bottom bg-no-repeat">
         <div class="content isolate mt-[120px] w-[90%] max-w-[1430px]">
           <div class="text relative after:absolute after:top-[-10px] after:bottom-[-10px] after:left-[-10px] after:right-[-10px] after:-z-10 after:block after:bg-headingBackground/50 after:bg-bottom after:bg-no-repeat after:blur-[30px] after:content-[''] after:md:hidden">
@@ -31,25 +28,25 @@ export default function Hero() {
           <div class="search-box relative mt-[80px] w-full rounded-[10px] border-2 border-accentRed bg-white p-[30px] sm:mt-[100px] sm:p-[40px] md:rounded-[15px] md:p-[48px] lg:p-[56px] xl:rounded-[20px] xl:p-[64] 2xl:p-[70px]">
             <div class="buttons xl-left-[60px] absolute top-[-15px] left-[10px] flex gap-[10px] overflow-x-auto sm:top-[-20px] sm:left-[20px] sm:gap-[20px] md:left-[30px] lg:top-[-22px] lg:left-[45px] xl:top-[-26px] 2xl:left-[70px]">
               <a
-                href="#"
+                href="/"
                 class="inline-flex h-[30px] w-[80px] items-center justify-center rounded-[7px] border-2 border-accentRed bg-accentRed text-[15px] font-bold text-white sm:h-[40px] sm:w-[120px] sm:text-[18px] lg:h-[45px] lg:w-[150px] lg:text-[22px] xl:h-[52px] xl:w-[170px] xl:text-[24px]"
               >
                 Buy
               </a>
               <a
-                href="#"
+                href="/"
                 class="inline-flex h-[30px] w-[80px] items-center justify-center rounded-[7px] border-2 border-accentRed bg-white text-[15px] font-bold text-accentRed sm:h-[40px] sm:w-[120px] sm:text-[18px] lg:h-[45px] lg:w-[150px] lg:text-[22px] xl:h-[52px] xl:w-[170px] xl:text-[24px]"
               >
                 Sell
               </a>
               <a
-                href="#"
+                href="/"
                 class="inline-flex h-[30px] w-[80px] items-center justify-center rounded-[7px] border-2 border-accentRed bg-white text-[15px] font-bold text-accentRed sm:h-[40px] sm:w-[120px] sm:text-[18px] lg:h-[45px] lg:w-[150px] lg:text-[22px] xl:h-[52px] xl:w-[170px] xl:text-[24px]"
               >
                 Exchange
               </a>
               <a
-                href="#"
+                href="/"
                 class="inline-flex h-[30px] w-[80px] items-center justify-center rounded-[7px] border-2 border-accentRed bg-white text-[15px] font-bold text-accentRed sm:h-[40px] sm:w-[120px] sm:text-[18px] lg:h-[45px] lg:w-[150px] lg:text-[22px] xl:h-[52px] xl:w-[170px] xl:text-[24px]"
               >
                 Rent
@@ -113,10 +110,6 @@ export default function Hero() {
 
       {/* <!-- Listing row --> */}
       {/* <Listings /> */}
-
-      
-      
-
     </main>
-  );
+  )
 }

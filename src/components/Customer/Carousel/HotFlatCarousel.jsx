@@ -63,7 +63,10 @@ export const HotFlatCarousel = () => {
             {/* <Carousel.Slide>asdsad</Carousel.Slide> */}
             {allProperties.map((property) => (
               <Carousel.Slide>
-                <Link to={'/productpage'}>
+                <Link
+                  to={`/productpage/${property?._id}`}
+                  state={{ data: property }}
+                >
                   <HotFlatCard property={property} />
                 </Link>
               </Carousel.Slide>
