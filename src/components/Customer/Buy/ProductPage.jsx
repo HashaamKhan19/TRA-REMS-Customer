@@ -1,31 +1,34 @@
 import React from 'react'
-import { Rating, Group } from '@mantine/core'
+import { Rating } from '@mantine/core'
 import locationFilledIcon from '../../../assets/icons/location-filled.png'
 import backgroundImage from '../../../assets/images/main-carousel-image.png'
 import mapImage from '../../../assets/images/location-map.png'
-import bluePrintIcon from '../../../assets/icons/blueprint.png'
-import bedroomIcon from '../../../assets/icons/bedroom-dark-icon.png'
-import garageIcon from '../../../assets/icons/garage-icon.png'
-import bathTubIcon from '../../../assets/icons/bath-with-person-icon.png'
 import callIcon from '../../../assets/icons/call-icon.png'
 import chatIcon from '../../../assets/icons/chat-icon.png'
 import bookingIcon from '../../../assets/icons/booking-icon.png'
+import BathtubOutlinedIcon from '@mui/icons-material/BathtubOutlined'
 import heartIcon from '../../../assets/icons/heart-icon.png'
+import ChevronRightIcon from '@mui/icons-material/ChevronRight'
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import shareIcon from '../../../assets/icons/share-icon.png'
 import playIcon from '../../../assets/icons/play-icon.png'
-import listIcon from '../../../assets/icons/list-icon.png'
-import checkListIcon from '../../../assets/icons/check-list.png'
 import { Link } from 'react-router-dom'
+import WarehouseOutlinedIcon from '@mui/icons-material/WarehouseOutlined'
+import HotelOutlinedIcon from '@mui/icons-material/HotelOutlined'
+import DoubleArrowIcon from '@mui/icons-material/DoubleArrow'
+import CheckBoxIcon from '@mui/icons-material/CheckBox'
+import { Carousel } from '@mantine/carousel'
+import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank'
 import { useLocation } from 'react-router-dom'
 
 const ProductPage = () => {
   const location = useLocation()
-  //   const property = location.state?.property
   const [property, setProperty] = React.useState({})
   React.useEffect(() => {
     console.log(location.state)
     setProperty(location.state?.data)
   }, [location])
+
   return (
     <div>
       <main class="flex flex-col items-center pt-[100px] 2xl:pt-[150px]">
@@ -109,6 +112,7 @@ const ProductPage = () => {
             </div>
           </div>
         </section>
+        {/* Carousel */}
         <section class="carousel mt-[25px] px-[30px] md:mt-[30px] lg:mt-[40px] lg:px-[50px] 2xl:mt-[50px]">
           <div class="main-image relative aspect-[2] w-full">
             <img
@@ -116,18 +120,44 @@ const ProductPage = () => {
               alt="Main Carousel Image"
               class="h-full w-full object-cover"
             />
-            <div class="absolute top-0 left-0 right-0 bottom-0 grid place-items-center">
-              <img
-                src={playIcon}
-                alt="Play Icon"
-                class="w-[50px] sm:w-[75px] md:w-[100px] lg:w-[120px] xl:w-[150px]"
-              />
-            </div>
           </div>
           <div class="slider mt-[10px] flex items-stretch justify-between gap-[15px] sm:mt-[15px] sm:gap-[20px] md:mt-[20px] md:gap-[25px] lg:mt-[25px] lg:gap-[30px] xl:mt-[30px] xl:gap-[42px]">
-            <div class="relative flex-1 overflow-hidden rounded-[7px]">
+            {/* {console.log('====================================')}
+            {console.log(Object.keys(property).length)}
+            {console.log('====================================')} */}
+
+            {Object.keys(property)?.length !== 0 && (
+              <Carousel
+                height={200}
+                slideSize="33.333333%"
+                slideGap="md"
+                loop
+                align="center"
+                slidesToScroll={5}
+                styles={{
+                  controls: {},
+                  control: {
+                    ':hover': {
+                      backgroundColor: 'white',
+                    },
+                    border: '1px solid red',
+                    backgroundColor: 'white',
+                    color: 'blue',
+                  },
+                }}
+                nextControlIcon={<ChevronRightIcon sx={{ color: 'red' }} />}
+                previousControlIcon={<ChevronLeftIcon sx={{ color: 'red' }} />}
+              >
+                {property?.images?.map((image) => (
+                  <Carousel.Slide key={image}>
+                    <img src={image} alt="" />
+                  </Carousel.Slide>
+                ))}
+              </Carousel>
+            )}
+            {/* <div class="relative flex-1 overflow-hidden rounded-[7px]">
               <img
-                src={backgroundImage}
+                src={backgroundImage
                 class="h-full w-full object-cover"
                 alt=""
               />
@@ -180,43 +210,40 @@ const ProductPage = () => {
                 class="h-full w-full object-cover"
                 alt=""
               />
-            </div>
+            </div> */}
           </div>
         </section>
+        {/* About */}
         <section class="mt-[35px] w-full px-[30px] sm:mt-[50px] md:mt-[60px] lg:mt-[80px] lg:px-[50px] xl:mt-[100px] 2xl:px-[120px]">
-          <h2 class="text-[22px] font-medium text-accentRed sm:text-[26px] md:text-[28px] lg:text-[34px] xl:text-[40px] 3xl:text-[50px]">
+          <h2 class="text-[22px] text-accentRed sm:text-[26px] md:text-[28px] lg:text-[34px] xl:text-[40px] 3xl:text-[50px]">
             About this property
           </h2>
+          <br />
+          <p class="text-[14px] text-headingBlue/100 sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 3xl:text-[25px]">
+            PROPERTY CATEGORY:
+            <p class="text-accentRed/70">{property?.propertyCategory} </p>
+            PROPERTY SUB CATEGORY:{' '}
+            <p class="text-accentRed/70">{property?.propertySubCategory}</p>
+          </p>
+          <br />
           <p class="text-[14px] text-headingBlue/50 sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 3xl:text-[25px]">
             Posted on June 24, 2022
           </p>
           <div class="features mt-[60px] flex h-[120px] items-stretch justify-between sm:h-[150px] md:h-[200px] lg:h-[250px] xl:h-[300px] 2xl:h-[350px]">
             <div class="feature grid flex-1 place-content-center place-items-center">
-              <img
-                src={bedroomIcon}
-                alt="Bathroom Icon"
-                class="w-[75px] sm:w-[100px] md:w-[120px] lg:w-[150px] xl:w-[180px] 2xl:w-[200px]"
-              />
+              <HotelOutlinedIcon style={{ fontSize: '200px' }} />
               <p class="mt-[16px] text-[14px] font-medium text-dividerBlack sm:text-[15px] md:text-[17px] lg:text-[20px] xl:text-[22px] 2xl:text-[30px]">
                 {property?.noOfBedRooms + ' Bedrooms' || 'noOfBedRooms here'}
               </p>
             </div>
             <div class="feature grid flex-1 place-content-center place-items-center">
-              <img
-                src={bathTubIcon}
-                alt="Bath Icon"
-                class="w-[75px] sm:w-[100px] md:w-[120px] lg:w-[150px] xl:w-[180px] 2xl:w-[200px]"
-              />
+              <BathtubOutlinedIcon style={{ fontSize: '200px' }} />
               <p class="mt-[16px] text-[14px] font-medium text-dividerBlack sm:text-[15px] md:text-[17px] lg:text-[20px] xl:text-[22px] 2xl:text-[30px]">
                 {property?.noOfBathrooms + ' Bathrooms' || 'noOfBathrooms here'}
               </p>
             </div>
             <div class="feature grid flex-1 place-content-center place-items-center">
-              <img
-                src={garageIcon}
-                alt="Garage Icon"
-                class="w-[75px] sm:w-[100px] md:w-[120px] lg:w-[150px] xl:w-[180px] 2xl:w-[200px]"
-              />
+              <WarehouseOutlinedIcon style={{ fontSize: '200px' }} />
               <p class="mt-[16px] text-[14px] font-medium text-dividerBlack sm:text-[15px] md:text-[17px] lg:text-[20px] xl:text-[22px] 2xl:text-[30px]">
                 {property?.parkingSpace + ' Garages' || 'noOfGarages here'}
               </p>
@@ -237,37 +264,84 @@ const ProductPage = () => {
           </h2>
           <ul class="mt-[16px] text-[17px] text-headingBlue/50 sm:text-[20px] md:text-[20px] lg:text-[25px] xl:text-[30px]">
             <li class="mb-[5px] flex items-center gap-[16px]">
-              <img src={listIcon} alt="" />
-              {property?.noOfBedRooms} Bedrooms
+              {property?.noOfBedRooms == 0 ? (
+                ''
+              ) : (
+                <>
+                  <DoubleArrowIcon style={{ color: 'red' }} />
+                  {property?.noOfBedRooms} Bedrooms
+                </>
+              )}
             </li>
             <li class="mb-[5px] flex items-center gap-[16px]">
-              <img src={listIcon} alt="" />
-              {property?.noOfBathrooms} Bathrooms
+              {property?.noOfBathrooms == 0 ? (
+                ''
+              ) : (
+                <>
+                  <DoubleArrowIcon style={{ color: 'red' }} />
+                  {property?.noOfBathrooms} Bathrooms
+                </>
+              )}
             </li>
             <li class="mb-[5px] flex items-center gap-[16px]">
-              <img src={listIcon} alt="" />
-              {property?.lounge} TV Lounge
+              {property?.lounge == 0 ? (
+                ''
+              ) : (
+                <>
+                  <DoubleArrowIcon style={{ color: 'red' }} />
+                  {property?.lounge} TV Lounge
+                </>
+              )}
             </li>
             <li class="mb-[5px] flex items-center gap-[16px]">
-              <img src={listIcon} alt="" />
-              {property?.drawingRoom} Drawing Room and {property?.diningRoom}{' '}
-              Dining room
+              {property?.drawingRoom == 0 ? (
+                ''
+              ) : (
+                <>
+                  <DoubleArrowIcon style={{ color: 'red' }} />
+                  {property?.drawingRoom} Drawing Room
+                </>
+              )}
             </li>
             <li class="mb-[5px] flex items-center gap-[16px]">
-              <img src={listIcon} alt="" />
-              {property?.kitchen} Kitchen
+              {property?.kitchen == 0 ? (
+                ''
+              ) : (
+                <>
+                  <DoubleArrowIcon style={{ color: 'red' }} />
+                  {property?.kitchen} Kitchen
+                </>
+              )}
             </li>
             <li class="mb-[5px] flex items-center gap-[16px]">
-              <img src={listIcon} alt="" />
-              {property?.storeRoom} Store Room
+              {property?.storeRoom == 0 ? (
+                ''
+              ) : (
+                <>
+                  <DoubleArrowIcon style={{ color: 'red' }} />
+                  {property?.storeRoom} Store Room
+                </>
+              )}
             </li>
             <li class="mb-[5px] flex items-center gap-[16px]">
-              <img src={listIcon} alt="" />
-              {property?.servantQuarters} Servant Quarter
+              {property?.servantQuarters == 0 ? (
+                ''
+              ) : (
+                <>
+                  <DoubleArrowIcon style={{ color: 'red' }} />
+                  {property?.servantQuarters} Servant Quarter
+                </>
+              )}
             </li>
             <li class="flex items-center gap-[16px]">
-              <img src={listIcon} alt="" />
-              {property?.parkingSpace} Parking Space
+              {property?.parkingSpace == 0 ? (
+                ''
+              ) : (
+                <>
+                  <DoubleArrowIcon style={{ color: 'red' }} />
+                  {property?.parkingSpace} Parking Space
+                </>
+              )}
             </li>
           </ul>
           <p class="mt-[20px] text-[17px] text-headingBlue/50 sm:mt-[25px] sm:text-[20px] md:mt-[30px] md:text-[20px] lg:mt-[40px] lg:text-[25px] xl:mt-[50px] xl:text-[30px]">
@@ -280,47 +354,83 @@ const ProductPage = () => {
           </h2>
           <div class="mt-[16px] grid grid-cols-2 gap-y-[24px] md:grid-cols-3">
             <div class="flex items-center gap-[10px] text-[17px] text-headingBlue/50 sm:text-[20px] md:text-[20px] lg:gap-[16px] lg:text-[25px] xl:text-[30px]">
-              <img src={checkListIcon} alt="" />
-              Dining Room
+              {property?.noOfBedRooms > 0 ? (
+                <CheckBoxIcon style={{ color: 'red', fontSize: '28px' }} />
+              ) : (
+                <CheckBoxOutlineBlankIcon style={{ fontSize: '28px' }} />
+              )}
+              Bedroom
             </div>
             <div class="flex items-center gap-[10px] text-[17px] text-headingBlue/50 sm:text-[20px] md:text-[20px] lg:gap-[16px] lg:text-[25px] xl:text-[30px]">
-              <img src={checkListIcon} alt="" />
+              {property?.kitchen > 0 ? (
+                <CheckBoxIcon style={{ color: 'red', fontSize: '28px' }} />
+              ) : (
+                <CheckBoxOutlineBlankIcon style={{ fontSize: '28px' }} />
+              )}
               Kitchen
             </div>
             <div class="flex items-center gap-[10px] text-[17px] text-headingBlue/50 sm:text-[20px] md:text-[20px] lg:gap-[16px] lg:text-[25px] xl:text-[30px]">
-              <img src={checkListIcon} alt="" />
+              {property?.drawingRoom > 0 ? (
+                <CheckBoxIcon style={{ color: 'red', fontSize: '28px' }} />
+              ) : (
+                <CheckBoxOutlineBlankIcon style={{ fontSize: '28px' }} />
+              )}
               Drawing Room
             </div>
             <div class="flex items-center gap-[10px] text-[17px] text-headingBlue/50 sm:text-[20px] md:text-[20px] lg:gap-[16px] lg:text-[25px] xl:text-[30px]">
-              <img src={checkListIcon} alt="" />
+              {property?.lounge > 0 ? (
+                <CheckBoxIcon style={{ color: 'red', fontSize: '28px' }} />
+              ) : (
+                <CheckBoxOutlineBlankIcon style={{ fontSize: '28px' }} />
+              )}
               TV Lounge
             </div>
             <div class="flex items-center gap-[10px] text-[17px] text-headingBlue/50 sm:text-[20px] md:text-[20px] lg:gap-[16px] lg:text-[25px] xl:text-[30px]">
-              <img src={checkListIcon} alt="" />
+              {property?.storeRoom > 0 ? (
+                <CheckBoxIcon style={{ color: 'red', fontSize: '28px' }} />
+              ) : (
+                <CheckBoxOutlineBlankIcon style={{ fontSize: '28px' }} />
+              )}
               Store Room
             </div>
             <div class="flex items-center gap-[10px] text-[17px] text-headingBlue/50 sm:text-[20px] md:text-[20px] lg:gap-[16px] lg:text-[25px] xl:text-[30px]">
-              <img src={checkListIcon} alt="" />
+              {property?.servantQuarters > 0 ? (
+                <CheckBoxIcon style={{ color: 'red', fontSize: '28px' }} />
+              ) : (
+                <CheckBoxOutlineBlankIcon style={{ fontSize: '28px' }} />
+              )}
               Servant Quarter
             </div>
             <div class="flex items-center gap-[10px] text-[17px] text-headingBlue/50 sm:text-[20px] md:text-[20px] lg:gap-[16px] lg:text-[25px] xl:text-[30px]">
-              <img src={checkListIcon} alt="" />
+              {property?.laundryRoom > 0 ? (
+                <CheckBoxIcon style={{ color: 'red', fontSize: '28px' }} />
+              ) : (
+                <CheckBoxOutlineBlankIcon style={{ fontSize: '28px' }} />
+              )}
               Laundry Room
             </div>
-            <div class="flex items-center gap-[10px] text-[17px] text-headingBlue/50 sm:text-[20px] md:text-[20px] lg:gap-[16px] lg:text-[25px] xl:text-[30px]">
+            {/* <div class="flex items-center gap-[10px] text-[17px] text-headingBlue/50 sm:text-[20px] md:text-[20px] lg:gap-[16px] lg:text-[25px] xl:text-[30px]">
               <img src={checkListIcon} alt="" />
               Gas
-            </div>
-            <div class="flex items-center gap-[10px] text-[17px] text-headingBlue/50 sm:text-[20px] md:text-[20px] lg:gap-[16px] lg:text-[25px] xl:text-[30px]">
+            </div> */}
+            {/* <div class="flex items-center gap-[10px] text-[17px] text-headingBlue/50 sm:text-[20px] md:text-[20px] lg:gap-[16px] lg:text-[25px] xl:text-[30px]">
               <img src={checkListIcon} alt="" />
               Water
+            </div> */}
+            <div class="flex items-center gap-[10px] text-[17px] text-headingBlue/50 sm:text-[20px] md:text-[20px] lg:gap-[16px] lg:text-[25px] xl:text-[30px]">
+              {property?.electricityBackup > 0 ? (
+                <CheckBoxIcon style={{ color: 'red', fontSize: '28px' }} />
+              ) : (
+                <CheckBoxOutlineBlankIcon style={{ fontSize: '28px' }} />
+              )}
+              Electricity Backup
             </div>
             <div class="flex items-center gap-[10px] text-[17px] text-headingBlue/50 sm:text-[20px] md:text-[20px] lg:gap-[16px] lg:text-[25px] xl:text-[30px]">
-              <img src={checkListIcon} alt="" />
-              Electricity
-            </div>
-            <div class="flex items-center gap-[10px] text-[17px] text-headingBlue/50 sm:text-[20px] md:text-[20px] lg:gap-[16px] lg:text-[25px] xl:text-[30px]">
-              <img src={checkListIcon} alt="" />
+              {property?.parkingSpace > 0 ? (
+                <CheckBoxIcon style={{ color: 'red', fontSize: '28px' }} />
+              ) : (
+                <CheckBoxOutlineBlankIcon style={{ fontSize: '28px' }} />
+              )}
               Parking Space
             </div>
           </div>

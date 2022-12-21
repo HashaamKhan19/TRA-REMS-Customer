@@ -3,6 +3,7 @@ import { HotFlatCard } from '../Card/HotFlatCard'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight'
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt'
+import Skeleton from '@mui/material/Skeleton'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
@@ -20,9 +21,6 @@ export const HotFlatCarousel = () => {
       .then((data) => {
         setIsLoaded(true)
         setAllProperties(data.data.body)
-        console.log('====================================')
-        // console.log(data)
-        console.log('====================================')
       })
       .catch((error) => {
         setIsLoaded(true)
@@ -33,7 +31,15 @@ export const HotFlatCarousel = () => {
   if (error) {
     return <div>Error: {error.message}</div>
   } else if (!isLoaded) {
-    return <div>Loading...</div>
+    return (
+      <>
+        <Skeleton height={'150px'} />
+        <Skeleton />
+        <Skeleton />
+        <Skeleton />
+        <Skeleton />
+      </>
+    )
   } else {
     return (
       <>
@@ -60,7 +66,6 @@ export const HotFlatCarousel = () => {
             nextControlIcon={<ChevronRightIcon sx={{ color: 'red' }} />}
             previousControlIcon={<ChevronLeftIcon sx={{ color: 'red' }} />}
           >
-            {/* <Carousel.Slide>asdsad</Carousel.Slide> */}
             {allProperties.map((property) => (
               <Carousel.Slide>
                 <Link
